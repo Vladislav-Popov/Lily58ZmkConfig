@@ -15,6 +15,7 @@
 #define RAISE  2
 #define NUMPAD 3
 
+
 / {
 	keymap {
 		compatible = "zmk,keymap";
