@@ -34,7 +34,7 @@
 		};
 
 		m_cut: m_cut {
-			label = "M_cut";
+			label = "m_cut";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -45,7 +45,7 @@
 		};
 
 		m_copy: m_copy {
-			label = "M_copy";
+			label = "m_copy";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -56,7 +56,7 @@
 		};
 
 		m_paste: m_paste {
-			label = "M_paste";
+			label = "m_paste";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
