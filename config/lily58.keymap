@@ -75,7 +75,7 @@
 // --------------------------------------------------------------------------------------------------------------
 // |   ESC   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | `~  🔍|
 // |   TAB   |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   \   |
-// |CAPS/CTRL|  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+// |   CTRL  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
 // |  SHIFT  |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //                       | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | DEL   |
 			
@@ -127,17 +127,17 @@
 		
 		numpad_layer {
 // ----------------------------------------------------------------------------------------------------------------
-// | ESC / ` |      |      |      |      |      |                   |      |       |       |      |       |   BS  |
+// | ESC / ` |      |      |      |      |      |                   |      |       |       |      |       |       |
 // |   TAB   |      |      |      |      |      |                   |  *   |   7   |   8   |   9  |   -   |       |
-// |CAPS/CTRL|      |      |      |      |      |                   |  /   |   4   |   5   |   6  |   +   |       |
+// |   CTRL  |      |      |      |      |      |                   |  /   |   4   |   5   |   6  |   +   |       |
 // |  SHIFT  |      |      |      |      |      |        |  |NUMLOCK|  =   |   1   |   2   |   3  |   .   | tgNUM |
 //                         |      |      |      |        |  | ENTER |  0   |   BS  |  DEL  |
 			
 			label = "NUMPAD";
 			bindings = <
-&mt GRAVE ESC	&none 		&none  		&none   	&none  		&none                      		&none  		&none 		&none  		&none   	&none  		&kp BSPC
+&mt GRAVE ESC	&none 		&none  		&none   	&none  		&none                      		&none  		&none 		&none  		&none   	&none  		&none  
 &kp TAB		&none 		&none  		&none   	&none  		&none                        		&kp KP_ASTERISK	&kp KP_N7 	&kp KP_N8 	&kp KP_N9 	&kp KP_MINUS	&none 
-&mt LCTL CAPS	&none 		&none  		&none   	&none  		&none                        		&kp KP_SLASH	&kp KP_N4 	&kp KP_N5 	&kp KP_N6 	&kp KP_PLUS  	&none 
+&kp LCTL 	&none 		&none  		&none   	&none  		&none                        		&kp KP_SLASH	&kp KP_N4 	&kp KP_N5 	&kp KP_N6 	&kp KP_PLUS  	&none 
 &kp LSHFT	&none  		&none  		&none   	&none  		&none      &none    	&kp KP_NLCK    	&kp EQUAL	&kp KP_N1 	&kp KP_N2 	&kp KP_N3 	&kp KP_DOT	&tog NUMPAD
                         			&trans  	&trans 		&trans     &trans   	&kp ENTER    	&kp KP_N0      	&trans    	&trans
 			>;
