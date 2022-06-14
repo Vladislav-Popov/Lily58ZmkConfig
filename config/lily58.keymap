@@ -85,7 +85,7 @@
 &kp TAB   	&kp Q  		&kp W  		&kp E   	&kp R    	&kp T              				&kp Y  		&kp U    	&kp I     	&kp O   	&kp P    	&kp BACKSLASH
 &kp LCTL 	&kp A  		&kp S  		&kp D    	&kp F    	&kp G             				&kp H  		&kp J    	&kp K     	&kp L   	&kp SEMI 	&kp SQT
 &kp LALT 	&kp Z  		&kp X 		&kp C  		&kp V   	&kp B  		&mt MINUS LBKT  &mt EQUAL RBKT 	&kp N  		&kp M    	&kp COMMA 	&kp DOT 	&kp FSLH 	&kp RSHFT
-                        			&lt RAISE CAPS  &kp LGUI 	&lt LOWER CAPS	&mt LSHFT SPACE	&lt RAISE RET 	&kp BSPC 	&kp DEL 	&none 
+                        			&lt LOWER CAPS  &kp LGUI 	&kp LSHFT	&mt LSHFT SPACE	&lt RAISE RET 	&kp BSPC 	&kp DEL 	&mo RAISE
 			>;
 		};
 
@@ -99,10 +99,10 @@
 			
 			label = "LOWER";
 			bindings = <
-&trans 		&kp F1 		 &kp F2 	   &kp F3  	     &kp F4		&kp F5 	                 	   	  &kp F6  		&kp F7  	&kp F8  	&kp F9  	&kp F10  	&trans	
-&none     	&none            &none             &none             &none  		&none                              	  &kp C_VOLUME_UP 	&kp C_BRI_UP    &none           &none           &kp PSCRN    	&none
-&trans    	&trans           &none             &none             &none   		&none                    	 	  &kp C_VOLUME_DOWN 	&kp C_BRI_DN    &none           &none           &none   	&none
-&trans     	&ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &none       	&none    	&kp F11         &kp F12   &kp C_MUTE    	&none           &none           &none           &none   	&none
+&bt BT_CLR 	&kp F1 		 &kp F2 	   &kp F3  	     &kp F4		&kp F5 	                 	   	  &kp F6  		&kp F7  	&kp F8  	&kp F9  	&kp F10  	&trans	
+&none     	&bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &none  		&out OUT_TOG                          	  &kp C_VOLUME_UP 	&kp C_BRI_UP    &none           &none           &kp PSCRN    	&none
+&trans    	&trans           &none             &none             &none   		&out OUT_USB                  	 	  &kp C_VOLUME_DOWN 	&kp C_BRI_DN    &none           &none           &none   	&none
+&trans     	&ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &none       	&out OUT_BLE    &kp F11         &kp F12   &kp C_MUTE    	&none           &none           &none           &none   	&none
                                              	   &trans            &trans      	&trans    	&mo CONFIG  	&trans    &trans    		&trans    	&trans
 			>;
 		};
