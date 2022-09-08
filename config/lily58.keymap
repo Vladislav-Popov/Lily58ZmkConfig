@@ -85,7 +85,7 @@
 &kp TAB   	&kp Q  		&kp W  		&kp E   	&kp R    	&kp T              				&kp Y  		&kp U    	&kp I     	&kp O   	&kp P    	&mt FSLH BACKSLASH
 &kp LCTL 	&kp A  		&kp S  		&kp D    	&kp F    	&kp G             				&kp H  		&kp J    	&kp K     	&kp L   	&kp SEMI 	&kp SQT
 &kp LSHFT 	&kp Z  		&kp X    	&kp C           &kp V    	&kp B  		&mt MINUS LBKT  &mt EQUAL RBKT 	&kp N  		&kp M    	&kp COMMA 	&kp DOT 	&kp FSLH 	&kp LSHFT
-                        			&lt LOWER CAPS  &kp LGUI 	&kp LALT	&mt LSHFT SPACE	&lt RAISE RET 	&kp BSPC 	&kp DEL 	&mo RAISE
+                        			&lt LOWER CAPS  &kp LGUI 	&kp LALT	&mt LSHFT SPACE	&lt RAISE RET 	&kp BSPC 	&kp DEL 	&tog NUMPAD
 			>;
 		};
 
@@ -113,7 +113,7 @@
 // |       |      |      |      |      |      |                   | PG_UP |       |  UP   |      |       |       |
 // |   	   |      |      |      |      |      |                   | PG_DN | LEFT  | DOWN  |RIGHT |       |       |
 // |   	   |      |      |      |      |      |        |  |INSERT |       |       |       |      |       |togNUM |
-//                       |      |      |      |        |  |       |       |       | PUSH  |
+//                       |      |      |      |        |  | PUSH  |       |       |       |
 			
 			label = "RAISE";
 			bindings = <
@@ -139,7 +139,7 @@
 &trans 		&tog NUMPAD 	&tog NUMPAD     &tog NUMPAD 	&tog NUMPAD    &tog NUMPAD                     		&kp KP_ASTERISK	&kp KP_N7 	&kp KP_N8 	&kp KP_N9 	&kp KP_MINUS	&none 
 &trans  	&tog NUMPAD 	&tog NUMPAD     &tog NUMPAD 	&tog NUMPAD    &tog NUMPAD                     		&kp KP_SLASH	&kp KP_N4 	&kp KP_N5 	&kp KP_N6 	&kp KP_PLUS  	&none 
 &trans 		&tog NUMPAD 	&tog NUMPAD     &tog NUMPAD 	&tog NUMPAD    &tog NUMPAD     &none    &kp EQUAL       &none		&kp KP_N1 	&kp KP_N2 	&kp KP_N3 	&kp KP_DOT	&tog NUMPAD
-                        			&trans  	&trans 	       &trans          &trans   &kp ENTER    	&trans      	&kp KP_N0    	&trans 
+                        			&trans  	&trans 	       &trans          &trans   &lt RAISE RET  	&trans      	&kp KP_N0    	&trans 
 			>;
 
 		};
