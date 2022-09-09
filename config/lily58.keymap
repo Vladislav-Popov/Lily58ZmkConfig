@@ -22,15 +22,28 @@
 / {
 
 	macros {
-		spotlight: spotlight {
-			label = "spotlight";
+		mask: mask {
+			label = "mask";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp Z &kp SPACE>
-                , <&macro_release &kp LGUI>
-                ;
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp G>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp N8 &>
+		, <&macro_press &kp LSHFT>
+		, <&macro_tap &kp N3>
+		, <&macro_release &kp LSHFT>
+		, <&macro_tap &kp M>
+		, <&macro_press &kp LSHFT>
+		, <&macro_tap &kp N5>
+		, <&macro_release &kp LSHFT>
+		, <&macro_tap &kp N8>
+		, <&macro_press &kp LSHFT>
+		, <&macro_tap &kp S>
+		, <&macro_release &kp LSHFT>
+		, <&macro_tap &kp F>
+		;
 		};
 
 		m_cut: m_cut {
@@ -117,7 +130,7 @@
 			
 			label = "RAISE";
 			bindings = <
-&trans 		&none 		&none  		&none   	&none  		&none                      		&none 	 	&none 		&none 		&none  		&none	  	&trans
+&trans 		&none 		&none  		&none   	&none  		&none                      		&none 	 	&none 		&none 		&none  		&mask	  	&trans
 &trans  	&none 		&none  		&none   	&none  		&none                        		&kp PG_UP   	&none   	&kp UP  	&none   	&none   	&none  
 &trans  	&none 		&none  		&none   	&none  		&none                        		&kp PG_DN   	&kp LEFT 	&kp DOWN 	&kp RIGHT 	&none 		&none
 &trans 		&none  		&none  		&none   	&none  		&none  	   &none  	&kp INSERT      &none		&none 		&none 		&none  		&none  		&tog NUMPAD
