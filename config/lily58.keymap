@@ -30,7 +30,7 @@
                 = <&macro_press &kp LSHFT>
                 , <&macro_tap &kp G>
                 , <&macro_release &kp LSHFT>
-                , <&macro_tap &kp N8 &>
+                , <&macro_tap &kp N8>
 		, <&macro_press &kp LSHFT>
 		, <&macro_tap &kp N3>
 		, <&macro_release &kp LSHFT>
