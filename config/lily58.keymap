@@ -46,27 +46,7 @@
 		;
 		};
 
-		m_cut: m_cut {
-			label = "m_cut";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp Z &kp X>
-                , <&macro_release &kp LGUI>
-                ;
-		};
-
-		m_copy: m_copy {
-			label = "m_copy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp Z &kp C>
-                , <&macro_release &kp LGUI>
-                ;
-		};
+		
 
 		m_paste: m_paste {
 			label = "m_paste";
