@@ -66,7 +66,7 @@
     		timeout-ms = <COMBO_TIMEOUT>;
       		key-positions = <46 47>; // [ M N , . / ]
       		bindings = <&mask>; 	 //       └─┴─────› mask
-     		layers = <0>;
+     		//layers = <0>;
     		};
 
     		combo_bsps_del {
@@ -75,6 +75,22 @@
       		bindings = <&kp LC(LA(DEL))>; //  └───┴────────› CTRL+ALT+DEL
       		layers = <0>;
     		};
+		
+		combo_reset_left {
+      		timeout-ms = <60>;
+      		key-positions = <1 37>;      //[ BS DEL RES ]
+      		bindings = <&reset>; //  └───┴────────› CTRL+ALT+DEL
+      
+    		};
+		
+		combo_reset_rigth {
+      		timeout-ms = <60>;
+      		key-positions = <12 50>;      //[ BS DEL RES ]
+      		bindings = <&reset>;          //  └───┴────────› CTRL+ALT+DEL
+   
+    		};
+		
+		
 	};
 
 	keymap {
