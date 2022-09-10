@@ -152,7 +152,7 @@
 &trans 		&tog NUMPAD 	&kp UP  	&tog NUMPAD  	&tog NUMPAD    &tog NUMPAD                     		&kp KP_ASTERISK	&kp KP_N7 	&kp KP_N8 	&kp KP_N9 	&kp KP_MINUS	&none 
 &trans  	&kp LEFT 	&kp DOWN 	&kp RIGHT  	&tog NUMPAD    &tog NUMPAD                     		&kp KP_SLASH	&kp KP_N4 	&kp KP_N5 	&kp KP_N6 	&kp KP_PLUS  	&none 
 &trans 		&tog NUMPAD 	&tog NUMPAD     &tog NUMPAD 	&tog NUMPAD    &tog NUMPAD     &none    &kp EQUAL       &kp KP_N0 	&kp KP_N1 	&kp KP_N2 	&kp KP_N3 	&kp KP_DOT	&tog NUMPAD
-                        			&trans  	&trans 	       &trans          &trans   &lt NAVI RET  	&mt BSPC KP_N0  &trans    	&trans 
+                        			&trans  	&trans 	       &trans          &trans   &trans  	&mt BSPC KP_N0  &trans    	&trans 
 			>;
 
 		};
