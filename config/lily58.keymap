@@ -17,6 +17,8 @@
 #define NUMPAD 4
 #define CONFIG 5
 
+#define COMBO_TIMEOUT 30
+
 
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
@@ -48,8 +50,6 @@
 		;
 		};
 
-		
-
 		m_paste: m_paste {
 			label = "m_paste";
             compatible = "zmk,behavior-macro";
@@ -61,6 +61,27 @@
                 ;
 		};
 	};
+
+
+	combos {
+    		compatible = "zmk,combos";
+
+    		combo_comma_dot {
+    		 timeout-ms = <COMBO_TIMEOUT>;
+      		key-positions = <47 48>; // [ k h , . ^ ]
+      		bindings = <&mask>; 	 //      └─┴─────› mask
+     		layers = <0>;
+    		};
+
+
+    		combo_k_h {
+      		timeout-ms = <COMBO_TIMEOUT>;
+      		key-positions = <25 26>; // [ k h , . ^ ]
+      		bindings = <&kp ESC>; //      └─┴─────────› esc
+      		layers = <0>;
+    		};
+	};
+
 
 
 	keymap {
