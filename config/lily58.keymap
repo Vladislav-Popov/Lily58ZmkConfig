@@ -28,7 +28,7 @@
 / {
 
 	macros {
-		mask: mask {
+		m_mask: m_mask {
 			label = "m_mask";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
