@@ -29,9 +29,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp G>
-                , <&macro_release &kp LSHFT>
+                = <&macro_tap &kp G>
                 , <&macro_tap &kp N8>
 		, <&macro_press &kp LSHFT>
 		, <&macro_tap &kp N3>
@@ -78,14 +76,14 @@
 		
 		combo_reset_left {
       		timeout-ms = <60>;
-      		key-positions = <1 37>;      //[ BS DEL RES ]
+      		key-positions = <0 36>;      //[ BS DEL RES ]
       		bindings = <&reset>; //  └───┴────────› CTRL+ALT+DEL
       
     		};
 		
 		combo_reset_rigth {
       		timeout-ms = <60>;
-      		key-positions = <12 50>;      //[ BS DEL RES ]
+      		key-positions = <11 49>;      //[ BS DEL RES ]
       		bindings = <&reset>;          //  └───┴────────› CTRL+ALT+DEL
    
     		};
