@@ -13,17 +13,14 @@
 #define QWERTY 0
 #define LOWER  1
 #define RAISE  2
-#define NAVI   3
-#define NUMPAD 4
+#define NUMPAD 3
+#define NAVI   4
 #define CONFIG 5
-#define COMBO_TIMEOUT 50
+
+#define COMBO_TIMEOUT 30
 
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
-
-&caps_word {
-    continue-list = <UNDERSCORE MINUS BSPC DEL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
-};
 
 / {
 
@@ -70,7 +67,7 @@
     		timeout-ms = <COMBO_TIMEOUT>;
       		key-positions = <46 47>; // [ M N , . / ]
       		bindings = <&m_mask>; 	 //       └─┴─────› mask
-     		//layers = <0>;
+     		layers = <0>;
     		};
 
     		combo_bsps_del {
@@ -122,7 +119,7 @@
 		
 		raise_layer {
 // --------------------------------------------------------------------------------------------------------------
-// |   	   |      |      |      |      |      |                   |       |       |       |      | mask  |       |
+// |   	   |      |      |      |      |      |                   |       |       |       |      |       |       |
 // |       |      |      |      |      |      |                   |       |       |       |      |       |       |
 // |   	   |      |      |      |      |      |                   |       |       |       |      |       |       |
 // |   	   |      |      |      |      |      |        |  |       |       |       |       |      |       |togNUM |
@@ -135,24 +132,6 @@
 &trans  	&none 		&none  		&none   	&none  		&none                        		&none 	 	&none 		&none 		&none	 	&none 		&none
 &trans 		&none  		&none  		&none   	&none  		&none  	   &none  	&none		&none		&none 		&none 		&none  		&none  		&tog NUMPAD
                         			&trans  	&trans 		&trans     &trans   	&mo CONFIG    	&trans      	&trans    	&trans
-			>;
-		};
-		
-		navi_layer {
-// --------------------------------------------------------------------------------------------------------------
-// |   	   |      |      |      |      |      |                   |       |       |       |      |       |       |
-// |       |      |      |      |      |      |                   | PG_UP | HOME  |  UP   | END  |       |       |
-// |   	   |      |      |      |      |      |                   | PG_DN | LEFT  | DOWN  |RIGHT |       |       |
-// |   	   |      |      |      |      |      |        |  |INSERT |       |       |       |      |       |       |
-//                       |      |      |      |        |  | PUSH  |       |       |       |
-			
-			label = "NAVI";
-			bindings = <
-&trans 		&none 		&none  		&none   	&none  		&none                      		&none 	 	&none 		&none 		&none  		&none	  	&trans
-&trans  	&none 		&none  		&none   	&none  		&none                        		&kp PG_UP   	&kp HOME   	&kp UP  	&kp END   	&none   	&none  
-&trans  	&none 		&none  		&none   	&none  		&none                        		&kp PG_DN   	&kp LEFT 	&kp DOWN 	&kp RIGHT 	&none	 	&none
-&trans 		&none  		&none  		&none   	&none  		&none  	   &none  	&kp INSERT      &none		&none 		&none 		&none  		&none  		&none
-                        			&trans  	&trans 		&trans     &trans   	&trans    	&trans      	&trans    	&trans
 			>;
 		};
 		
@@ -169,10 +148,28 @@
 &trans 	        &tog NUMPAD 	&tog NUMPAD   	&tog NUMPAD 	&tog NUMPAD    &tog NUMPAD                      	&none  		&none 		&none  		&none   	&none  		&kp KP_NLCK 
 &trans 		&tog NUMPAD 	&kp UP  	&tog NUMPAD  	&tog NUMPAD    &tog NUMPAD                     		&kp KP_ASTERISK	&kp KP_N7 	&kp KP_N8 	&kp KP_N9 	&kp KP_MINUS	&none 
 &trans  	&kp LEFT 	&kp DOWN 	&kp RIGHT  	&tog NUMPAD    &tog NUMPAD                     		&kp KP_SLASH	&kp KP_N4 	&kp KP_N5 	&kp KP_N6 	&kp KP_PLUS  	&none 
-&trans 		&tog NUMPAD 	&tog NUMPAD     &tog NUMPAD 	&tog NUMPAD    &tog NUMPAD     &none    &kp EQUAL       &kp KP_N0 	&kp KP_N1 	&kp KP_N2 	&kp KP_N3 	&kp KP_DOT	&none
-                        			&trans  	&trans 	       &trans          &trans   &lt NAVI RET  	&mt BSPC KP_N0  &trans    	&tog NUMPAD 
+&trans 		&tog NUMPAD 	&tog NUMPAD     &tog NUMPAD 	&tog NUMPAD    &tog NUMPAD     &none    &kp EQUAL       &kp KP_N0 	&kp KP_N1 	&kp KP_N2 	&kp KP_N3 	&kp KP_DOT	&tog NUMPAD
+                        			&trans  	&trans 	       &trans          &trans   &lt NAVI RET  	&mt BSPC KP_N0  &trans    	&trans 
 			>;
 
+		};
+		
+		navi_layer {
+// --------------------------------------------------------------------------------------------------------------
+// |   	   |      |      |      |      |      |                   |       |       |       |      |       |       |
+// |       |      |      |      |      |      |                   | PG_UP | HOME  |  UP   | END  |       |       |
+// |   	   |      |      |      |      |      |                   | PG_DN | LEFT  | DOWN  |RIGHT |       |       |
+// |   	   |      |      |      |      |      |        |  |INSERT |       |       |       |      |       |       |
+//                       |      |      |      |        |  | PUSH  |       |       |       |
+			
+			label = "NAVI";
+			bindings = <
+&trans 		&none 		&none  		&none   	&none  		&none                      		&none 	 	&none 		&none 		&none  		&none	  	&trans
+&trans  	&none 		&none  		&none   	&none  		&none                        		&kp PG_UP   	&kp HOME   	&kp UP  	&kp END   	&none   	&none  
+&trans  	&none 		&none  		&none   	&none  		&none                        		&kp PG_DN   	&kp LEFT 	&kp DOWN 	&kp RIGHT 	&none	 	&none
+&trans 		&none  		&none  		&none   	&none  		&none  	   &none  	&kp INSERT      &none		&none 		&none 		&none  		&none  		&tog NUMPAD
+                        			&trans  	&trans 		&trans     &trans   	&trans    	&trans      	&trans    	&trans
+			>;
 		};
 		
 		comfig_layer {
