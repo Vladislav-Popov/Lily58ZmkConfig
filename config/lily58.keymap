@@ -32,20 +32,19 @@
 	    wait-ms = <10>;
             tap-ms = <10>;
             bindings
-                = <&macro_tap &kp G>
-                , <&macro_tap &kp N8>
-		, <&macro_press &kp LSHFT>
-		, <&macro_tap &kp N3>
+                = <&macro_press &kp LSHFT>
+		, <&macro_tap &kp A>
 		, <&macro_release &kp LSHFT>
-		, <&macro_tap &kp M>
+		, <&macro_tap &kp N>
+		, <&macro_tap &kp N>
 		, <&macro_press &kp LSHFT>
-		, <&macro_tap &kp N5>
+		, <&macro_tap &kp N2>
+		, <&macro_tap &kp N7>
+		, <&macro_tap &kp V>
 		, <&macro_release &kp LSHFT>
-		, <&macro_tap &kp N8>
-		, <&macro_press &kp LSHFT>
-		, <&macro_tap &kp S>
-		, <&macro_release &kp LSHFT>
-		, <&macro_tap &kp F>
+		, <&macro_tap &kp L>
+		, <&macro_tap &kp A>
+		, <&macro_tap &kp D>
 		;
 		};
 
